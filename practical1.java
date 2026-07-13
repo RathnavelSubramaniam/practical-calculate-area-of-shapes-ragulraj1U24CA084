@@ -65,14 +65,21 @@ return length * width;
 
 class Square extends Rectangle
 {
+double sideLength;
 public Square(Point p1, double sideLength)
 {
 super(p1, new Point(p1.getX() + sideLength, p1.getY()), new Point(p1.getX() +
 sideLength, p1.getY() + sideLength), new Point(p1.getX(), p1.getY() + sideLength));
+this.sideLength=sideLength;
+}
+public double calculateArea()
+{
+    return sideLength*sideLength;
+
 }
 
 }
-class practical1
+public class practical1
 {
 public static void main(String[] args)
 {
